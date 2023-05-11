@@ -112,6 +112,7 @@ brew_install() {
     "Spotify")            brew install --cask spotify ;;
     "MidnightCommander")  brew install mc ;;
     "NeoFetch")           brew install neofetch ;;
+    "ClearDock")          refresh_dock ;;
   esac
 }
 
@@ -139,7 +140,7 @@ refresh_dock() {
     }
 
     clear_dock
-    # echo "/Applications/Firefox.app\n/System/Applications/System Settings.app" | add_dock_shortcuts 
+    # echo "/Applications/Firefox.app\n/System/Applications/System Settings.app" | add_dock_shortcuts
 
     killall Dock
 }
@@ -148,7 +149,7 @@ menu() {
   clear;
 
   #if a value starts with '-' it means its a menu, otherwise a non whitspaced string is fine!
-  checkbox  -ACCEDO "Slack" "1password" -IDE "VSCode" "AndroidStudio" "Atom" -DEVTOOLS "Node" "ApkTool" "Nvm" "Git" "CharlesProxy" "Fish" -BROWSERS "Chrome" "Firefox" "Brave" -EXTRAS "Spotify" "MidnightCommander" "NeoFetch"
+  checkbox  -ACCEDO "Slack" "1password" -IDE "VSCode" "AndroidStudio" "Atom" -DEVTOOLS "Node" "ApkTool" "Nvm" "Git" "CharlesProxy" "Fish" -BROWSERS "Chrome" "Firefox" "Brave" -EXTRAS "Spotify" "MidnightCommander" "NeoFetch" -DEBLOAT "ClearDock"
 
   clear;
 
@@ -171,8 +172,6 @@ menu() {
   do
      brew_install "$i"
   done
-
-  refresh_dock
 }
 
 menu
