@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 clear_dock() {
     defaults delete com.apple.dock persistent-apps
