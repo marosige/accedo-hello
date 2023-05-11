@@ -1,9 +1,30 @@
 #!/bin/bash
 
-# install homebrew
-# /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+uninstall=false
 
-brew install --cask google-chrome
+brewit() {
+  if [ "$#" -eq 0 ]; then
+    exit 1
+  elif [ "$uninstall" = true ] ; then
+    brew remove $@
+  else
+    brew install $@
+  fi
+}
+
+# If first param is uninstall it will uninstall homebrew apps
+if [ $1 = "uninstall" ]; then
+  uninstall=true
+fi
+
+# Install homebrew if it was not installed previously
+which -s brew
+if [[ $? != 0 ]] ; then
+    # Install Homebrew
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
+
+brewit --cask google-chrome
 
 # brew cask install slack
 
@@ -11,10 +32,16 @@ brew install --cask google-chrome
 
 # brew cask install android-studio
 
-brew install --cask atom
+brewit --cask atom
 
-brew install neofetch
+brewit neofetch
 
 # brew cask install spotify
 
-brew install --cask tiles
+brewit --cask tiles
+
+
+# Uninstall homebrew
+#if [ "$uninstall" = true ] ; then
+#  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall.sh)"
+#else
