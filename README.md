@@ -4,7 +4,7 @@
 
 To use it simply past this line into terminal:
 
-    sudo sh <(curl -s "https://raw.githubusercontent.com/gergely-marosi-accedo/accedo-hello/main/hello.sh")
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/gergely-marosi-accedo/accedo-hello/main/hello.sh)"
 
 **About the app **
 
