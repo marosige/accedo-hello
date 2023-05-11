@@ -6,6 +6,10 @@ To use it simply past this line into terminal:
 
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/gergely-marosi-accedo/accedo-hello/main/hello.sh)"
 
+(On smaller screens the list is not perfect, so a fullscreen terminal is recommended)
+
+**Controls**
+
 1. Use the up and down arrows to navigate between rows
 2. Press space to select or deselect the highlighted row
 3. Press enter to install the selected software
