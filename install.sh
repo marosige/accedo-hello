@@ -3,7 +3,7 @@
 # install homebrew
 # /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-brew cask install google-chrome
+brew install --cask google-chrome
 
 # brew cask install slack
 
@@ -11,10 +11,10 @@ brew cask install google-chrome
 
 # brew cask install android-studio
 
-brew cask install atom
+brew install --cask atom
 
 brew install neofetch
 
 # brew cask install spotify
 
-brew cask install tiles
+brew install --cask tiles
