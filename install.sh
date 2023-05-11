@@ -40,7 +40,6 @@ brewit neofetch
 
 brewit --cask tiles
 
-
 # Uninstall homebrew
 if [ "$uninstall" = true ] ; then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall.sh)"
