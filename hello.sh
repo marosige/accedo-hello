@@ -115,6 +115,35 @@ brew_install() {
   esac
 }
 
+refresh_dock() {
+    clear_dock() {
+        defaults delete com.apple.dock persistent-apps
+    }
+
+    add_dock_shortcuts() {
+        while IFS= read -r line
+        do
+            defaults write com.apple.dock persistent-apps -array-add "<dict>
+                <key>tile-data</key>
+                <dict>
+                    <key>file-data</key>
+                    <dict>
+                        <key>_CFURLString</key>
+                        <string>$line</string>
+                        <key>_CFURLStringType</key>
+                        <integer>0</integer>
+                    </dict>
+                </dict>
+            </dict>"
+        done
+    }
+
+    clear_dock
+    echo "/Applications/Firefox.app\n/System/Applications/System Settings.app" | add_dock_shortcuts 
+
+    killall Dock
+}
+
 menu() {
   clear;
 
@@ -143,6 +172,7 @@ menu() {
      brew_install "$i"
   done
 
+  refresh_dock
 }
 
 menu
