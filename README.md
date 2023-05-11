@@ -19,26 +19,54 @@ Currently only MAC OS is supported.
 **Supported apps**
 
     -ACCEDO
-      [ ] Slack
-      [ ] 1password
-    -IDE
-      [ ] VSCode
-      [ ] AndroidStudio
-      [ ] Atom
+    [ ] Slack
+    [ ] 1password
+    -TEXT_EDITOR
+    [ ] AndroidStudio
+    [ ] VSCode
+    [ ] Atom
+    [ ] Webstorm
+    [ ] IntelliJIDEA
+    [ ] SublimeText
+    [ ] MicrosoftOffice
     -DEVTOOLS
-      [ ] Node
-      [ ] ApkTool
-      [ ] Nvm
-      [ ] Git
-      [ ] CharlesProxy
-      [ ] Fish
+    [ ] AndroidSDK
+    [ ] ApkTool
+    [ ] OpenJDK
+    [ ] Node
+    [ ] Nvm
+    [ ] Docker
+    [ ] Colima
+    [ ] Fish
+    -NETWORKING
+    [ ] CharlesProxy
+    [ ] Wireshark
+    [ ] NordLayer
+    [ ] Tunnelblick
+    -VERSION_CONTROL
+    [ ] Git
+    [ ] Sourcetree
+    [ ] GitKraken
+    [ ] GitHubDesktop
     -BROWSERS
-      [ ] Chrome
-      [ ] Firefox
-      [ ] Brave
+    [ ] Chrome
+    [ ] Firefox
+    [ ] Brave
+    [ ] Opera
+    [ ] OperaGX
+    -FILE_MANAGEMENT
+    [ ] MidnightCommander
+    [ ] TheUnarchiver
+    [ ] 7zip
+    [ ] AndroidFileTransfer
+    -COMMUNICATION
+    [ ] Zoom
+    [ ] Skype
+    [ ] Webex
     -EXTRAS
-      [ ] Spotify
-      [ ] MidnightCommander
-      [ ] NeoFetch
+    [ ] Spotify
+    [ ] VLC
+    [ ] AppCleaner
+    [ ] NeoFetch
     -DEBLOAT
-      [ ] ClearDock
+    [ ] ClearDock
