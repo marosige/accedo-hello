@@ -34,16 +34,36 @@ function display(){
     tput rc
     for (( i=0 ; i<max ; i++ ));do
         if [[ ${current} == "${i}" && ${selected[${i}]} == true ]];then
-            printf "\e[0;90m[\e[0;91m*\e[0;90m] \e[0m\e[0;91m%s\e[0m\n" "${options[$i]}"
+            if [[ "${options[$i]}" = -* ]]
+                then
+	            printf "\e[0m\e[1;77m%s\e[0m\n" "${options[$i]}"
+            else
+                printf "\e[0;90m[\e[0;91m*\e[0;90m] \e[0m\e[0;91m%s\e[0m\n" "${options[$i]}"
+            fi  
 
-        elif [[ ${current} == "${i}" && ${selected[${i}]} == false ]];then
-            printf "\e[0;90m[ ] \e[0m\e[0;91m%s\e[0m\n" "${options[$i]}"
+        elif [[ ${current} == "${i}" && ${selected[${i}]} == false ]];then            
+            if [[ "${options[$i]}" = -* ]]
+                then
+	            printf "\e[0m\e[1;77m%s\e[0m\n" "${options[$i]}"
+            else
+                printf "\e[0;90m[ ] \e[0m\e[0;91m%s\e[0m\n" "${options[$i]}"
+            fi   
 
         elif [[ ${selected[${i}]} == true ]];then
-            printf "\e[0;90m[\e[0;91m*\e[0;90m] \e[0m\e[1;77m%s\e[0m\n" "${options[$i]}"
+            if [[ "${options[$i]}" = -* ]]
+                then
+	            printf "\e[0m\e[1;77m%s\e[0m\n" "${options[$i]}"
+            else
+                printf "\e[0;90m[\e[0;91m*\e[0;90m] \e[0m\e[1;77m%s\e[0m\n" "${options[$i]}"	            
+            fi        
 
-        elif [[ ${selected[${i}]} == false ]];then
-            printf "\e[0;90m[ ] \e[0m\e[1;77m%s\e[0m\n" "${options[$i]}"
+        elif [[ ${selected[${i}]} == false ]];then            
+            if [[ "${options[$i]}" = -* ]]
+                then
+	            printf "\e[0m\e[1;77m%s\e[0m\n" "${options[$i]}"
+            else
+                printf "\e[0;90m[ ] \e[0m\e[1;77m%s\e[0m\n" "${options[$i]}"
+            fi  
         fi
     done
 }
