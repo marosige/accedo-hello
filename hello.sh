@@ -139,7 +139,7 @@ refresh_dock() {
     }
 
     clear_dock
-    echo "/Applications/Firefox.app\n/System/Applications/System Settings.app" | add_dock_shortcuts 
+    # echo "/Applications/Firefox.app\n/System/Applications/System Settings.app" | add_dock_shortcuts 
 
     killall Dock
 }
