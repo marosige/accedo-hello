@@ -7,16 +7,7 @@ To use it simply past this line into terminal:
 
     sh <(curl -s "https://raw.githubusercontent.com/gergely-marosi-accedo/accedo-hello/main/install.sh")
 
-**Details**
-
-                         _        _          _ _       
-   __ _  ___ ___ ___  __| | ___ _| |__   ___| | | ___  
-  / _` |/ __/ __/ _ \/ _` |/ _ (_) '_ \ / _ \ | |/ _ \ 
- | (_| | (_| (_|  __/ (_| | (_) || | | |  __/ | | (_) |
-  \__,_|\___\___\___|\__,_|\___(_)_| |_|\___|_|_|\___/ 
-                                                       
-
-About the app 
+**About the app **
 
 Accedo:hello allows you to configure your machine based on your role. It helps to save time with searching for needed tools, clarifying what are approved by the company, and running installs one by one. Also, it debloat your OS to remove the stuff that everyone does remove after clean machine is launched. 
 
