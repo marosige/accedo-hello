@@ -2,7 +2,7 @@
 
 **Usage**
 
-To use it simply past this line into terminal:
+To use it simply paste this line into terminal:
 
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/gergely-marosi-accedo/accedo-hello/main/hello.sh)"
 
